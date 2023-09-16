@@ -23,11 +23,24 @@ export let ticketReducer = (state = initialSate, {type , payload}) => {
                     }
                  })
             }
-            console.log(cloneList);
             return {...state , seletecTicket: cloneList}
         }
         case CHANGE_STYLE : {
-           console.log(payload);
+            let cloneList = [...state.ticketArr]
+            let isCheck = true;
+            cloneList.forEach((items) => { 
+               items.danhSachGhe.forEach((item,index) => { 
+                    if (item.soGhe == payload && item.daDat == true) {
+                        isCheck = false
+                        item.daDat = false
+                    }
+                    if (!isCheck) return;
+                    if (item.soGhe == payload) {
+                        item.daDat = true
+                    }
+                })
+             })
+            return {...state , ticketArr: cloneList}
         }
         default : {
             return state

@@ -11,7 +11,7 @@ class ListLeftTicket extends Component {
             <button className="btn ">{item.hang}</button>
           </td>
           <td className='text-white'>
-            <button style={{backgroundColor : item.danhSachGhe[0].daDat == true ? "green" : "white"}} onClick={() => { this.props.handleChangeStyle(item) }}
+            <button style={{backgroundColor : item.danhSachGhe[0].daDat == true ? "green" : "white"}} onClick={() => { this.props.handleChangeStyle(item.danhSachGhe[0].soGhe) }}
             className="btn">
               <a onClick={() => {this.props.handleAddToList(item.danhSachGhe[0])}}
               href="#" type='button'>{item.danhSachGhe[0].soGhe}
@@ -19,7 +19,8 @@ class ListLeftTicket extends Component {
             </button>
           </td>
           <td className='text-white'>
-            <button className="btn">
+            <button style={{backgroundColor : item.danhSachGhe[1].daDat == true ? "green" : "white"}} onClick={() => { this.props.handleChangeStyle(item.danhSachGhe[1].soGhe) }}
+            className="btn">
               <a  onClick={() => {this.props.handleAddToList(item.danhSachGhe[1])}}
               href="#" type='button'>{item.danhSachGhe[1].soGhe}
               </a>
