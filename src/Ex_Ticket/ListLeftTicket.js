@@ -27,62 +27,72 @@ class ListLeftTicket extends Component {
               </button>
           </td>
           <td className='text-white'>
-            <button className="btn">
+            <button style={{backgroundColor : item.danhSachGhe[2].daDat == true ? "green" : "white"}} onClick={() => { this.props.handleChangeStyle(item.danhSachGhe[2].soGhe) }}
+            className="btn">
               <a    onClick={() => {this.props.handleAddToList(item.danhSachGhe[2])}}
               href="#" type='button'>{item.danhSachGhe[2].soGhe}
               </a>
               </button>
           </td>
           <td className='text-white'>
-            <button className="btn">
+            <button style={{backgroundColor : item.danhSachGhe[3].daDat == true ? "green" : "white"}} onClick={() => { this.props.handleChangeStyle(item.danhSachGhe[3].soGhe) }}
+            className="btn">
               <a   onClick={() => {this.props.handleAddToList(item.danhSachGhe[3])}}
               href="#" type='button'>{item.danhSachGhe[3].soGhe}</a>
               </button>
           </td>
           <td className='text-white'>
-            <button className="btn">
+            <button style={{backgroundColor : item.danhSachGhe[4].daDat == true ? "green" : "white"}} onClick={() => { this.props.handleChangeStyle(item.danhSachGhe[4].soGhe) }}
+            className="btn">
             <a   onClick={() => {this.props.handleAddToList(item.danhSachGhe[4])}}
               href="#" type='button'>{item.danhSachGhe[4].soGhe}</a>
             </button>
           </td>
           <td className='text-white'>
-            <button className="btn">
+            <button style={{backgroundColor : item.danhSachGhe[5].daDat == true ? "green" : "white"}} onClick={() => { this.props.handleChangeStyle(item.danhSachGhe[5].soGhe) }}
+            className="btn">
             <a   onClick={() => {this.props.handleAddToList(item.danhSachGhe[5])}}
               href="#" type='button'>{item.danhSachGhe[5].soGhe}</a>
             </button>
           </td>
           <td className='text-white'>
-            <button className="btn">
+            <button style={{backgroundColor : item.danhSachGhe[6].daDat == true ? "green" : "white"}} onClick={() => { this.props.handleChangeStyle(item.danhSachGhe[6].soGhe) }}
+            className="btn">
             <a   onClick={() => {this.props.handleAddToList(item.danhSachGhe[6])}}
               href="#" type='button'>{item.danhSachGhe[6].soGhe}</a>
             </button>
           </td>
           <td className='text-white'>
-            <button className="btn">
+            <button style={{backgroundColor : item.danhSachGhe[7].daDat == true ? "green" : "white"}} onClick={() => { this.props.handleChangeStyle(item.danhSachGhe[7].soGhe) }}
+            className="btn">
             <a   onClick={() => {this.props.handleAddToList(item.danhSachGhe[7])}}
               href="#" type='button'>{item.danhSachGhe[7].soGhe}</a>
             </button>
           </td>
           <td className='text-white'>
-            <button className="btn">
+            <button style={{backgroundColor : item.danhSachGhe[8].daDat == true ? "green" : "white"}} onClick={() => { this.props.handleChangeStyle(item.danhSachGhe[8].soGhe) }}
+            className="btn">
             <a   onClick={() => {this.props.handleAddToList(item.danhSachGhe[8])}}
               href="#" type='button'>{item.danhSachGhe[8].soGhe}</a>
             </button>
           </td>
           <td className='text-white'>
-            <button className="btn">
+            <button style={{backgroundColor : item.danhSachGhe[9].daDat == true ? "green" : "white"}} onClick={() => { this.props.handleChangeStyle(item.danhSachGhe[9].soGhe) }}
+            className="btn">
             <a   onClick={() => {this.props.handleAddToList(item.danhSachGhe[9])}}
               href="#" type='button'>{item.danhSachGhe[9].soGhe}</a>
             </button>
           </td>
           <td className='text-white'>
-            <button className="btn">
+            <button style={{backgroundColor : item.danhSachGhe[10].daDat == true && item.danhSachGhe[10].gia == 0 ?  "#ffc601" : item.danhSachGhe[10].daDat == true ? "green" : "white"}} onClick={() => { this.props.handleChangeStyle(item.danhSachGhe[10].soGhe) }}
+            className="btn">
             <a   onClick={() => {this.props.handleAddToList(item.danhSachGhe[10])}}
               href="#" type='button'>{item.danhSachGhe[10].soGhe}</a>
               </button>
           </td>
           <td className='text-white'>
-            <button className="btn">
+            <button style={{backgroundColor : item.danhSachGhe[11].daDat == true && item.danhSachGhe[10].gia == 0 ? "#ffc601" :  item.danhSachGhe[11].daDat == true ? "green" : "white"}} onClick={() => { this.props.handleChangeStyle(item.danhSachGhe[11].soGhe) }}
+            className="btn">
             <a   onClick={() => {this.props.handleAddToList(item.danhSachGhe[11])}}
               href="#" type='button'>{item.danhSachGhe[11].soGhe}</a>
             </button>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { REMOVE_TICKET } from './Constant/TicketConstant'
 
 class ListRightTicket extends Component {
   renderDiv = (name, color) => {
@@ -79,7 +80,8 @@ class ListRightTicket extends Component {
               <th>{this.renderPriceTableTicket()}</th>
               <th>{this.renderTicketTable()}</th>
               <th>
-                <button className="btn btn-danger">Delete</button>
+                <button onClick={() => { this.props.handleRemove(this.props.ticketArr) }}
+                className="btn btn-danger">Delete</button>
               </th>
             </tr> 
           </tbody>
@@ -104,4 +106,16 @@ let mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(ListRightTicket)
+let mapDispatchToProps = (dispatch) => { 
+  return {
+    handleRemove : (ticket) => { 
+      let action = {
+        type : REMOVE_TICKET,
+        payload : ticket
+      }
+      dispatch(action)
+     }
+  }
+ }
+
+export default connect(mapStateToProps,mapDispatchToProps)(ListRightTicket)

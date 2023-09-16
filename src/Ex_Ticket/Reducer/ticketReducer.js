@@ -1,4 +1,4 @@
-import { ADD_TO_LIST, CHANGE_STYLE } from "../Constant/TicketConstant";
+import { ADD_TO_LIST, CHANGE_STYLE, REMOVE_TICKET } from "../Constant/TicketConstant";
 import { ticketArr } from "../dataTicket";
 
 const initialSate = {
@@ -41,6 +41,19 @@ export let ticketReducer = (state = initialSate, {type , payload}) => {
                 })
              })
             return {...state , ticketArr: cloneList}
+        }
+        case REMOVE_TICKET : {
+            let cloneList = [...state.ticketArr]
+            cloneList.forEach((items) => { 
+                items.danhSachGhe.forEach((item) => { 
+                    if (item.gia == 75000) {
+                        item.daDat = false
+                    }
+                 })
+             })
+             let cloneList1 = [...state.seletecTicket]
+             cloneList1=[]
+             return {...state , ticketArr :cloneList, seletecTicket: cloneList1}
         }
         default : {
             return state
