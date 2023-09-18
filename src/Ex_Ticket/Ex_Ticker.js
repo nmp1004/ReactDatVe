@@ -7,7 +7,7 @@ export default class Ex_Ticker extends Component {
   render() {
     return (
       <div>
-        <div className="row">
+        <div className="row m-0">
             <ListLeftTicket/>
             <ListRightTicket/>
         </div>

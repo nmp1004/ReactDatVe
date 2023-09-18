@@ -105,7 +105,7 @@ class ListLeftTicket extends Component {
   }
   render() {
     return (
-      <div className='col-8 pb-3'>
+      <div className='col-8 py-3'>
         <h3 className='text-warning font-weight-bolder'>ĐẶT VÉ XEM PHIM CYPERLANE.VN</h3>
         <h4 className='text-white'>Màn hình</h4>
         <div style={{

@@ -51,11 +51,15 @@ class ListRightTicket extends Component {
    }
   renderTicketSeletedTable = () => { 
     let contentTr = ""
-    this.props.seletecTicket.forEach((item) => { 
-      contentTr += item.soGhe + " "
+    this.props.seletecTicket.forEach((item,index) => { 
+      if (index < (this.props.seletecTicket.length - 1 )) {
+        contentTr += item.soGhe + ","
+      } else {
+        contentTr += item.soGhe + " "
+        }
      })
     return (
-      <div>{contentTr}</div>
+      <div style={{margin:"0", display:"inline-block", wordWrap:"break-word",width:"130px"}}>{contentTr}</div>
     )
    }
   render() {
@@ -76,13 +80,13 @@ class ListRightTicket extends Component {
           </thead>
           <tbody>
           <tr className='text-white'>
-              <th>{this.renderTicketSeletedTable()}</th>
-              <th>{this.renderPriceTableTicket()}</th>
-              <th>{this.renderTicketTable()}</th>
-              <th>
+              <td>{this.renderTicketSeletedTable()}</td>
+              <td>{this.renderPriceTableTicket()}</td>
+              <td>{this.renderTicketTable()}</td>
+              <td>
                 <button onClick={() => { this.props.handleRemove(this.props.ticketArr) }}
                 className="btn btn-danger">Delete</button>
-              </th>
+              </td>
             </tr> 
           </tbody>
           <tfoot>
